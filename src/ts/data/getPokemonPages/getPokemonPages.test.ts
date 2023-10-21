@@ -1,4 +1,6 @@
 import { getPokemonPages } from "./getPokemonPages.js";
+import { mockFetch } from "../../mockFetch/mockFetch.js";
+import mockData from "../../mockFetch/mockData.json";
 
 describe("Given a getPokemonPages function", () => {
   describe("When you receive url for a starting page and a number ok pokemon to start the page viewing", () => {
@@ -6,6 +8,7 @@ describe("Given a getPokemonPages function", () => {
       const startingUrl = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=";
       const pageStartingPokemonUrl = "100";
       const testName = "electrode";
+      window.fetch = mockFetch(mockData);
 
       const pokemonInfo = await getPokemonPages(
         startingUrl,

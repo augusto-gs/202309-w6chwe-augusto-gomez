@@ -5,7 +5,8 @@
   "main": "public/index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx jest",
+    "test:dev": "npx jest --watchAll",
     "prepare": "husky install",
     "start": "node .",
     "start:dev": "node --watch .",
