@@ -6,7 +6,7 @@ class PokemonItem extends Component {
     parentElement: Element,
     private readonly pokemon: PokemonName,
   ) {
-    super(parentElement, "div", "pokemon-item");
+    super(parentElement, "li", "pokemon-item");
   }
 
   protected populate(): void {
