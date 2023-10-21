@@ -11,9 +11,9 @@ class App extends Component {
         <h1 class="main-title">Pokemon Page</h1>
       </header>
       <main class="main">
-      <section class="frame container"></section>
+        <section class="frame container">
+        </section>
       </main>
-      
     `;
   }
 }
