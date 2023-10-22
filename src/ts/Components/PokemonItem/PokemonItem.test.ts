@@ -4,7 +4,7 @@ describe("Given a PokemonItem component", () => {
   describe("When it receives a div element and a pokemon", () => {
     test("Then it should show its name", () => {
       const container = document.createElement("div");
-      const expectedName = "exeggcute";
+      const expectedName = "electrode";
       const pokemonList = [
         {
           id: 1,

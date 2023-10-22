@@ -58,3 +58,15 @@ const previousButton = new Button(body, "previous", "Previous", async () => {
   pokemonList.render();
 });
 previousButton.render();
+
+// Const printPokemon = async () => {
+//   const promise = new Promise((resolve) => {
+//     const pokemonInformation = pokemonList.pokemonUrl;
+//     resolve(pokemonInformation);
+//   });
+//   return promise;
+// };
+
+// (async () => {
+//   console.log(await printPokemon());
+// })();
