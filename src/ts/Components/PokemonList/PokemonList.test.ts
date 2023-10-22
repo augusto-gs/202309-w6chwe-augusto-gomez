@@ -1,5 +1,4 @@
 import PokemonList from "./PokemonList";
-import mockData from "../../mockFetch/mockData.json";
 
 describe("Given a PokemonList component", () => {
   describe("When it receives a a div element and a list of pokemon", () => {
