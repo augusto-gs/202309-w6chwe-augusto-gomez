@@ -1,10 +1,10 @@
 import Component from "../Component/Component.js";
-import { type PokemonName } from "../../types/types.js";
+import { type FilteredPokemonData } from "../../types/types.js";
 
 class PokemonItem extends Component {
   constructor(
     parentElement: Element,
-    private readonly pokemon: PokemonName,
+    private readonly pokemon: FilteredPokemonData,
   ) {
     super(parentElement, "li", "pokemon-item");
   }
@@ -15,7 +15,7 @@ class PokemonItem extends Component {
     ${this.pokemon.name}
     </span>
     <a href="" class="pokemon-item-url">
-    ${this.pokemon.url}
+        <img class="pokemon-img" src=${this.pokemon.image}>
     </a>`;
   }
 }

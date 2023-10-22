@@ -1,3 +1,4 @@
+import { getPokemonById } from "../../data/GetPokemonByID/GetPokemonByID.js";
 import { type PokemonName } from "../../types/types.js";
 import Component from "../Component/Component.js";
 import PokemonItem from "../PokemonItem/PokemonItem.js";
@@ -11,8 +12,9 @@ class PokemonList extends Component {
   }
 
   protected populate(): void {
-    this.pokemons.forEach((pokemon) => {
-      const pokemonItem = new PokemonItem(this.element, pokemon);
+    this.pokemons.forEach(async (pokemon) => {
+      const pokemonData = await getPokemonById(pokemon.url);
+      const pokemonItem = new PokemonItem(this.element, pokemonData);
       pokemonItem.render();
     });
   }

@@ -7,16 +7,20 @@ describe("Given a PokemonItem component", () => {
       const expectedName = "exeggcute";
       const pokemonList = [
         {
+          id: 1,
           name: "electrode",
           url: "https://pokeapi.co/api/v2/pokemon/101/",
+          image: "",
         },
         {
+          id: 2,
           name: "exeggcute",
           url: "https://pokeapi.co/api/v2/pokemon/102/",
+          image: "",
         },
       ];
 
-      const pokemon = new PokemonItem(container, pokemonList[1]);
+      const pokemon = new PokemonItem(container, pokemonList[0]);
       pokemon.render();
       const pokemonNameElement = container.querySelector(".pokemon-item--name");
 
