@@ -1,3 +1,8 @@
 @use "./globals";
 @use "./variables";
 @use "./components/app.scss";
+@use "components/header.scss";
+@use "components/pokemon-item.scss";
+@use "components/pokemon-list.scss";
+@use "components/button.scss";
+@use "components/pokemon-card.scss";

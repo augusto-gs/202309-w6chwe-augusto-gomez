@@ -14,9 +14,8 @@ class PokemonItem extends Component {
     <span class="pokemon-item--name">
     ${this.pokemon.name}
     </span>
-    <a class="pokemon${this.pokemon.id}">
-        <img class="pokemon-img" src=${this.pokemon.image}>
-    </a>`;
+    <img class="pokemon-img" src=${this.pokemon.image}>
+    `;
   }
 }
 

@@ -22,7 +22,7 @@ class PokemonList extends Component {
       const pokemonItem = new PokemonItem(this.element, pokemonData);
       pokemonItem.render();
       const button = new Button(
-        this.element,
+        pokemonItem.element,
         `button${pokemon.name}`,
         "Details",
         async () => {
