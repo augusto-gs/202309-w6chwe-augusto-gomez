@@ -1,0 +1,19 @@
+.pokemon-item {
+  border-radius: 33px;
+  background-color: blue;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px;
+  &--name {
+    text-shadow:
+      -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+      1px 1px 0 #fff;
+    text-transform: capitalize;
+    width: -webkit-fill-available;
+    font-size: 38px;
+  }
+}

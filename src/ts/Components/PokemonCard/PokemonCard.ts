@@ -12,10 +12,13 @@ class PokemonCard extends Component {
   protected populate(): void {
     this.element.innerHTML = `
     <img class="pokemon-card--image"src=${this.pokemonDetails.sprites.other["official-artwork"].front_default} alt="" />
-    <span class="pokemon-card--weight">${this.pokemonDetails.weight}
+    <span class="">${this.pokemonDetails.name}
     </span>
-    <span class="pokemon-card--height">${this.pokemonDetails.height}
-    </span>`;
+    <span class="pokemon-card--weight">Weight: ${this.pokemonDetails.weight}
+    </span>
+    <span class="pokemon-card--height">Height: ${this.pokemonDetails.height}
+    </span> 
+    `;
   }
 }
 
