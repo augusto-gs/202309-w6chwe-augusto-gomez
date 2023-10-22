@@ -59,14 +59,18 @@ const previousButton = new Button(body, "previous", "Previous", async () => {
 });
 previousButton.render();
 
-// Const printPokemon = async () => {
-//   const promise = new Promise((resolve) => {
-//     const pokemonInformation = pokemonList.pokemonUrl;
-//     resolve(pokemonInformation);
-//   });
-//   return promise;
-// };
+const pokemonListContainer = document.querySelector(".pokemon-list");
 
-// (async () => {
-//   console.log(await printPokemon());
-// })();
+const backToIndexButton = new Button(body, "return", "Go back to index", () => {
+  const pokemonCard = document.querySelector("article");
+  pokemonCard?.remove();
+  pokemonListContainer?.remove();
+  const pokemonList = new PokemonList(frame, pokemonInfo.results);
+  pokemonList.render();
+  document.querySelector(".button--previous")!.classList.toggle("hidden");
+  document.querySelector(".button--next")!.classList.toggle("hidden");
+  document.querySelector(".button--return")?.classList.toggle("hidden");
+});
+backToIndexButton.render();
+
+document.querySelector(".button--return")?.classList.toggle("hidden");
