@@ -28,16 +28,19 @@ class PokemonList extends Component {
         async () => {
           this.pokemonUrl = pokemon.url;
           console.log(this.pokemonUrl);
-          this.deletePokemons();
+          this.element.remove();
           const expandedPokemonData = await expandPokemonDetails(
             this.pokemonUrl,
           );
           const frame = document.querySelector(".frame")!;
-          // Const container = document.createElement("div");
-          // container.textContent = expandedPokemonData.height.toString();
-          // frame.appendChild(container);
+
           const pokemonCard = new PokemonCard(frame, expandedPokemonData);
           pokemonCard.render();
+          document.querySelector(".button--return")?.classList.toggle("hidden");
+          document
+            .querySelector(".button--previous")!
+            .classList.toggle("hidden");
+          document.querySelector(".button--next")!.classList.toggle("hidden");
         },
       );
       button.render();
