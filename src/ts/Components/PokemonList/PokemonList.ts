@@ -4,6 +4,7 @@ import Component from "../Component/Component.js";
 import PokemonItem from "../PokemonItem/PokemonItem.js";
 import Button from "../Button/Button.js";
 import { expandPokemonDetails } from "../../data/expandPokemonDetails.js";
+import PokemonCard from "../PokemonCard/PokemonCard.js";
 
 class PokemonList extends Component {
   pokemonUrl: string;
@@ -32,9 +33,11 @@ class PokemonList extends Component {
             this.pokemonUrl,
           );
           const frame = document.querySelector(".frame")!;
-          const container = document.createElement("div");
-          container.textContent = expandedPokemonData.height.toString();
-          frame.appendChild(container);
+          // Const container = document.createElement("div");
+          // container.textContent = expandedPokemonData.height.toString();
+          // frame.appendChild(container);
+          const pokemonCard = new PokemonCard(frame, expandedPokemonData);
+          pokemonCard.render();
         },
       );
       button.render();
