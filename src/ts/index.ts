@@ -3,9 +3,12 @@ import App from "./Components/App/App.js";
 import PokemonList from "./Components/PokemonList/PokemonList.js";
 
 const firstPageUrl = "https://pokeapi.co/api/v2/pokemon?limit=10&offset=";
-const pageStartingPokemonUrl = "100";
+const pageStartingPokemonUrl = 0;
 
-const pokemonInfo = await getPokemonPages(firstPageUrl, pageStartingPokemonUrl);
+export const pokemonInfo = await getPokemonPages(
+  firstPageUrl,
+  pageStartingPokemonUrl,
+);
 
 const body = document.querySelector("body")!;
 

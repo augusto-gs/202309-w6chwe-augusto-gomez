@@ -2,7 +2,7 @@ import { type PokemonList } from "../../types/types";
 
 export const getPokemonPages = async (
   url: string,
-  pageStartingPokemonUrl: string,
+  pageStartingPokemonUrl: number,
 ): Promise<PokemonList> => {
   const response = await fetch(`${url}${pageStartingPokemonUrl}`);
   const responseBody = (await response.json()) as PokemonList;

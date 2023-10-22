@@ -1,5 +1,5 @@
 abstract class Component {
-  protected readonly element: Element;
+  element: Element;
 
   constructor(
     private readonly parentElement: Element,
